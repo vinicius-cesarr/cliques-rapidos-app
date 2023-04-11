@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cliques rapidos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.3.0-web/css/all.css">
+    <script>
+        function iniciarJogo(){
+            var nivel = document.getElementById('nivel').value
+
+            if(nivel === ''){
+                alert('Selecione um nivel para iniciar o jogo')
+                return false
+            }
+
+            window.location.href = 'jogo.html?' + nivel
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="h-100 row justify-content-center align-items-center w-100">
+            <div class="row">
+                <div class="col-12">
+                    <img src="img/letsplay.png" class="w-50 mx-auto d-flex" alt="">
+                    <h2 class="text-center display-3 text-danger">
+                        Cliques rapidos
+                    </h2>
+                </div>
+                <div class="col-12 my-3">
+                    <div class="d-flex justify-content-center">
+                        <select name="" class="form-control" id="nivel" style="width: 600px;">
+                            <option value="">
+                                Selecione o nivel
+                            </option>
+                            <option value="normal">
+                                Normal
+                            </option>
+                            <option value="dificil">
+                                Dificil
+                            </option>
+                            <option value="impossivel">
+                                impossivel
+                            </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex justify-content-center">
+                        <button class="btn btn-outline-danger btn-lg" style="width: 300px; height: 50px; border-radius: 200px;" onclick="iniciarJogo()">
+                            Iniciar
+                        </button>
+                    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+
+
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+</body>
+
+
+</html>
