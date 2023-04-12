@@ -5,11 +5,11 @@ var tempo = 10
 
 var geracirculo = 1250
 
-
 var nivel = window.location.search
 nivel = nivel.replace('?','')
 //vai tirar o ? para valor nulo
-//window.location.search é basicamente um window.location.href porem recuperando apenas o que vem pos ? incluindo o ?
+//window.location.search é basicamente um window.location.href porem recuperando apenas o que vem pos ?
+// incluindo o ?
 
 if(nivel==='normal'){
     //1250
@@ -21,6 +21,18 @@ if(nivel==='normal'){
 
 }else if(nivel==='impossivel'){
     geracirculo = 750
+}else if(nivel==='infinito'){
+    geracirculo = 1000
+    vidas = -99999
+    tempo = Infinity
+
+    var voltar = document.createElement('BUTTON');
+    voltar.innerHTML = 'Voltar'
+    voltar.className = 'btn btn-outline-danger m-3 botao'
+    voltar.addEventListener('click',function(){
+        window.location.href = 'index.html'
+    })
+    document.body.appendChild(voltar);
 }
 
 function arrumarTamanho() {
